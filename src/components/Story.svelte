@@ -1,11 +1,15 @@
 <script>
     import { data } from './../assets/gyc.json';
     export let photos = [];
+    export let titleIconBook = false;
     export let title = undefined;
     export let description = undefined;
 </script>
 
 <div class="g__section">
+    {#if titleIconBook}
+        <i class="fas fa-book"></i>
+    {/if}
     <h1>{title}</h1>
     <p>{description}</p>
     <div class="photos__wrapper">
@@ -46,5 +50,9 @@
         .photos__wrapper > img {
             width: 35rem;
         }
+    }
+
+    i{
+        font-size: 3rem;
     }
 </style>
